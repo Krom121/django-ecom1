@@ -4,7 +4,9 @@
 {% include "layout/head.html" %}
 <body>
     {% include "layout/navagation.html" %}
+    {% block header %}
     {% include "layout/header.html" %}
+    {% endblock header %}
 
     {% block content %}
       
