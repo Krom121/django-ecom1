@@ -11,4 +11,6 @@ urlpatterns = [
     #### BLOG URLS ###
     path('blog/', PostListView.as_view(), name='list'),
     path('post/<slug>/<pk>/', PostDetailView.as_view(), name='post-detail'),
+    ## OTHER BASE URLS FOR DEPENDENCIES #####
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
