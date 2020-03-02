@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, FormView 
 from .forms import ContactForm, SubscribeForm
 from blog.models import Post
 
