@@ -31,7 +31,7 @@ class PostListView(ListView):
         featured = Post.published.filter(featured=True)
         latest = Post.published.order_by('-publish')[0:4]
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Welcome'
+        context['title'] = 'Our Blogs'
         context['category'] = Category.objects.filter()
         context['post'] = post
         context['featured'] = featured

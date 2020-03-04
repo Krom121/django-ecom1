@@ -20,3 +20,88 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.contact-page {
+  padding: 50rem 0;
+  background-image: linear-gradient(to right top, 
+  rgba(75, 115, 237, 0.8), 
+  rgba(21, 67, 206, 0.9)); }
+
+/*  Form sytles   */
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 5rem;
+  margin: 2rem;
+  background-image: linear-gradient(to bottom, rgba(75, 115, 237, 0.7), rgba(21, 67, 206, 0.7));
+  border-radius: 2.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5); }
+
+.form-container__heading {
+  color: seashell;
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 3rem;
+    padding: 0; }
+
+.form-container__inputbox {
+    position: relative; }
+
+.form-container__inputbox, .form-container input {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #eee;
+    margin-bottom: 3rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+    outline: none;
+    background: transparent; }
+
+.form-container__inputbox, .form-container label {
+    font-size: 1.6rem;
+    color: #eee; }
+
+.form-container__icons {
+    font-size: 1.8rem;
+    padding-left: .8rem; }
+
+/* Button styles*/
+
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    margin-top: 1rem; }
+
+.btn--form {
+    color: white;
+    background: inherit;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all .4s ease-in;
+    margin-top: 4rem; }
+
+.btn--form:hover {
+    background: green;
+    color: #fff;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn--form:active {
+    transform: translateY(0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }

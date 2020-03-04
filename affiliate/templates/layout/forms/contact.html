@@ -1,6 +1,18 @@
+{% extends 'layout/base.html' %}
 {% load static %}
-<form action="#" method="POST">
-{% csrf_token %}
-{{ form }}
-<input type="submit">
-</form>
+{% block header %}
+{% endblock %}
+{% block content %}
+<section class="contact-page">
+    <div class="form-container">
+        <h2 class="form-container__heading">Get in Touch today</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                {{ field }}
+                {{ form.errors }}
+                <button class="btn--form">Send your message</button>
+            </form>
+    </div>        
+</section>  
+{% endblock content %}

@@ -6,7 +6,11 @@
   <meta name="description" content="The number 1# place to get your running shoes on">
   <meta name="author" content="Pytonixs Ltd">
 
-  <title>Run With Me</title>
+  {% if title %}
+      <title>Run With Me | {{ title }}</title>
+    {% else %}
+      <title>Run With Me</title>
+  {% endif %}
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">

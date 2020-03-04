@@ -23,9 +23,14 @@ class HomeView(FormView,TemplateView):
 
 class ContactView(FormView):
     form_class = ContactForm
-    template_name = 'form/contact.html'
+    template_name = 'layout/forms/contact.html'
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         form.save()
         return super(ContactView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Contact Us'
+        return context
