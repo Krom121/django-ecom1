@@ -73,7 +73,8 @@ body {
 
 /* Button styles*/
 
-.btn:link, .btn:visited {
+.btn:link, 
+.btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -81,6 +82,23 @@ body {
     border-radius: 10rem;
     transition: all .2s;
     margin-top: 1rem; }
+
+.btn--white {
+    background-color: #fff;
+    color: #344; 
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.btn--white:hover {
+    background: green;
+    color: #fff;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn--white:active {
+    transform: translateY(0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--form {
     color: white;
@@ -213,3 +231,17 @@ body {
 .post-card_body {
     color: #344;
     text-align: center; }
+
+/* featured blogs */
+
+.blog-featured {
+    display: flex; }
+  
+  .blog-section {
+    padding: 1rem 0; }
+
+.blog-section__text {
+    width: 57%;
+    color: #344;
+    padding: 5rem;
+    margin: 0 auto; }

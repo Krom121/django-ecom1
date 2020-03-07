@@ -86,6 +86,35 @@
       </div>
     </div>
     <!-- /.row -->
+<section class="blog-section">
+    <div class="row">
+       <p class="blog-section__text">
+        <span class="blog-section__text--bolder">Get to know us better,</span>
+        Read our blogs you will be surprised at what topics we cover. 
+        Find out what we think about the tech industry, 
+        find out about our hobbies, our favorite movies. 
+        Leave your comments and tell us what you think. 
+        As we would love to get to know you too.
+       </p>
+
+       <!-- Featured posts for landing page -->
+       <div class="blog-featured">
+       {% for post in featured %}
+       <div class="blog-card">
+        <a href="{{post.get_absolute_url}}"><img src="{{post.image_thumbnail.url}}" alt="{{post.title}}" class="blog-card__img"></a>
+        <h5 class="blog-card__title">{{post.title}}</h5>
+        <div class="blog-card__date">Published by {{post.author}}</div>
+        <div class="blog-card__body">
+            {{post.description | truncatewords:8 | safe}}
+        </div>
+        </div>
+        {% endfor %} 
+        </div>
+            <div class="blog-section__btn margin-top-sm">
+            <a href="{% url 'list' %}" class="btn btn--white">Read our lastest blogs</a>           
+        </div>
+    </div>  
+</section>
     <!-- Amazon search bar -->
     <br/>
     <hr/>

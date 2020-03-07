@@ -5,9 +5,11 @@ from .forms import ContactForm, SubscribeForm
 from blog.models import Post
 
 '''
+
 Class based views where used for the landing page and conact page.
 Form view was use to serve the forms conact and subscriber. This allows for
 my code to be cleaner, reusable and maintainable.
+Template view is used to serve the index.html file.
 
 '''
 
