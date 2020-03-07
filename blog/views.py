@@ -16,7 +16,7 @@ class PostListView(ListView):
     success_url = 'post-list'
     success_message = "You are now a subscriber Thank you"
     
-   
+   # Function for saving new subscriber to the database
     def post(self, request, *args, **kwargs):
         form = SubscribeForm(data=request.POST)
         if form.is_valid():
@@ -27,11 +27,12 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         post = Post.published.all()[0:6]
-        
         featured = Post.published.filter(featured=True)
         latest = Post.published.order_by('-publish')[0:4]
         context = super().get_context_data(**kwargs)
+        # Change the block title for each page when nessecery
         context['title'] = 'Our Blogs'
+        # blog categories
         context['category'] = Category.objects.filter()
         context['post'] = post
         context['featured'] = featured
@@ -44,6 +45,7 @@ class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/detail.html'
     context_object_name = 'post'
+
 
     def get_context_data(self, **kwargs):
         comment_form = CommentForm
