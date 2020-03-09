@@ -17,7 +17,7 @@ SECRET_KEY = '+g_%m-g1+kbgrvyluu*r$xtv%1n6a-!3x#mnr%*%yn@!ny=u*+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,7 +123,7 @@ Setup for static files to use the base directory
 
 '''
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -146,6 +146,6 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-STATICFILES_STORAGE = 'whitenosie.storageCompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenosie.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
