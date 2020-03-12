@@ -110,7 +110,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 '''
 Setup for static files to use the base directory
 
